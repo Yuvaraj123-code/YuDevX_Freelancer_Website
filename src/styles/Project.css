@@ -1,0 +1,55 @@
+/* Add to Projects.css */
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+
+html {
+  scroll-padding-top: 100px; /* Adjust this value based on your header height */
+}
+
+.tag {
+  background-color: #e0f2fe;
+  color: #0369a1;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.text-center {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+
+/* Existing styles... */
+
+.project-links {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.live-link {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #f0f0f0;
+  color: #333;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.live-link:hover {
+  background-color: #e0e0e0;
+}
+
+/* For the "View All Projects" page */
+.all-projects-page .projects-grid {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
