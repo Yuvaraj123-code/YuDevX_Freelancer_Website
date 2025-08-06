@@ -381,6 +381,8 @@ form.space-y-4 > * + * {
   .text-center.md\:text-right {
     text-align: right;
   }
+
+ 
 }
 
 .text-slate-300.text-sm.mb-2 {
@@ -539,5 +541,9 @@ form.space-y-4 > * + * {
   .flex.flex-wrap.items-center.gap-6 {
     justify-content: center;
     text-align: center;
+  }
+
+  .space-y-3{
+    margin-left: 70px;
   }
 }

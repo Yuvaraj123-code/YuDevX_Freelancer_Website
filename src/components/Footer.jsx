@@ -68,7 +68,7 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-6  relative" style={{marginRight:"140px"}}>
               Quick Links
-              <div className="absolute -bottom-2 left-0 w-8 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400" style={{marginLeft:"40px"}}></div>
+              <div className="absolute -bottom-2 left-0 w-8 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400" style={{marginLeft:"55px"}}></div>
             </h4>
             <ul className="space-y-3">
               {['Home', 'About Us', 'Services', 'Portfolio', 'Team', 'Contact'].map((link) => (

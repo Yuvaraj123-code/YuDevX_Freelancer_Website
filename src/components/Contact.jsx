@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import '../styles/Contact.css';
+import db from "../firebaseConfig"; 
+import { collection, addDoc, Timestamp } from "firebase/firestore";
+import { FaCheckCircle, FaTimesCircle } from 'react-icons/fa';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -9,6 +12,13 @@ const Contact = () => {
     message: ''
   });
 
+
+   const [notification, setNotification] = useState({
+    show: false,
+    message: '',
+    isSuccess: false
+  });
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -16,18 +26,54 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Add your form submission logic here
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message! We will contact you soon.');
-  };
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  try {
+    await addDoc(collection(db, "contacts"), {
+      ...formData,
+      createdAt: Timestamp.now()
+    });
+     setNotification({
+        show: true,
+        message: "Thank you for your message! We will contact you soon.",
+        isSuccess: true
+      });
+    // alert("Thank you for your message! We will contact you soon.");
+    setFormData({ name: '', email: '', subject: '', message: '' }); // reset
+     setTimeout(() => {
+        setNotification({...notification, show: false});
+      }, 4000);
+  } catch (error) {
+    console.error("Error adding document: ", error);
+    alert("Something went wrong. Please try again later.");
+      setNotification({
+        show: true,
+        message: "Something went wrong. Please try again later.",
+        isSuccess: false
+      });
+      
+      // Hide notification after 4 seconds
+      setTimeout(() => {
+        setNotification({...notification, show: false});
+      }, 4000);
+  }
+};
+
 
   return (
     <section id="contact" className="contact-section">
       <div className="container">
         <h2 className="section-title">Contact Us</h2>
         <p className="section-subtitle">Get in touch to discuss your project</p>
+
+          {notification.show && (
+          <div className={`notification-popup ${notification.isSuccess ? 'success' : 'error'}`}>
+            <div className="notification-content">
+              <p>{notification.message}</p>
+            </div>
+          </div>
+        )}
         
         <div className="contact-content">
           <div className="contact-info">

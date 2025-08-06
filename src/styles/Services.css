@@ -171,9 +171,9 @@ html {
 }
 
 .service-features li {
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   position: relative;
-  padding-left: 32px;
+  padding-Right: 77px;
   color: #475569;
   font-weight: 500;
   transition: all 0.3s ease;
@@ -337,7 +337,7 @@ html {
   }
   
   .service-features li {
-    padding-left: 28px;
+    padding-Left: -10px;
     font-size: 0.9rem;
   }
 }

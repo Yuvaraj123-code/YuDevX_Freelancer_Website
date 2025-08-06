@@ -1,0 +1,237 @@
+[debug] [2025-08-06T20:26:05.278Z] ----------------------------------------------------------------------
+[debug] [2025-08-06T20:26:05.281Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2025-08-06T20:26:05.282Z] CLI Version:   14.11.2
+[debug] [2025-08-06T20:26:05.282Z] Platform:      win32
+[debug] [2025-08-06T20:26:05.282Z] Node Version:  v22.12.0
+[debug] [2025-08-06T20:26:05.282Z] Time:          Thu Aug 07 2025 01:56:05 GMT+0530 (India Standard Time)
+[debug] [2025-08-06T20:26:05.282Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-08-06T20:26:05.521Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-08-06T20:26:05.522Z] > authorizing via signed-in user (yudevx@gmail.com)
+[debug] [2025-08-06T20:26:05.621Z] java version "17.0.12" 2024-07-16 LTS
+
+[debug] [2025-08-06T20:26:05.621Z] Java(TM) SE Runtime Environment (build 17.0.12+8-LTS-286)
+Java HotSpot(TM) 64-Bit Server VM (build 17.0.12+8-LTS-286, mixed mode, sharing)
+
+[debug] [2025-08-06T20:26:05.640Z] Parsed Java major version: 17
+[info] i  emulators: Starting emulators: functions, firestore, extensions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions, firestore, extensions"}}
+[debug] [2025-08-06T20:26:05.643Z] Checked if tokens are valid: true, expires at: 1754514002432
+[debug] [2025-08-06T20:26:05.643Z] Checked if tokens are valid: true, expires at: 1754514002432
+[debug] [2025-08-06T20:26:05.644Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/yudevx-53074 [none]
+[debug] [2025-08-06T20:26:06.924Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/yudevx-53074 200
+[debug] [2025-08-06T20:26:06.924Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/yudevx-53074 {"projectNumber":"91075718293","projectId":"yudevx-53074","lifecycleState":"ACTIVE","name":"YuDevX","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2025-08-06T18:14:56.582319Z"}
+[debug] [2025-08-06T20:26:06.939Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-08-06T20:26:06.940Z] [firestore] Firestore Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-08-06T20:26:06.942Z] [firestore.websocket] websocket server for firestore only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-08-06T20:26:06.942Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":3000},{"address":"::1","family":"IPv6","port":3000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":9000}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9152}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2025-08-06T20:26:06.949Z] [hub] writing locator at C:\Users\urajy\AppData\Local\Temp\hub-yudevx-53074.json
+[debug] [2025-08-06T20:26:06.959Z] [Extensions] Started Extensions emulator, this is a noop.
+[debug] [2025-08-06T20:26:06.966Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-08-06T20:26:06.967Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-08-06T20:26:06.967Z] [tasks] Cloud Tasks Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-08-06T20:26:06.967Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":3000},{"address":"::1","family":"IPv6","port":3000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":9000}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9152}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":3001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}],"tasks":[{"address":"127.0.0.1","family":"IPv4","port":9499}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: apphosting, auth, database, hosting, pubsub, storage, dataconnect {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mapphosting, auth, database, hosting, pubsub, storage, dataconnect\u001b[22m"}}
+[debug] [2025-08-06T20:26:06.990Z] defaultcredentials: writing to file C:\Users\urajy\AppData\Roaming\firebase\yudevx_gmail_com_application_default_credentials.json
+[debug] [2025-08-06T20:26:06.991Z] Setting GAC to C:\Users\urajy\AppData\Roaming\firebase\yudevx_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\urajy\\AppData\\Roaming\\firebase\\yudevx_gmail_com_application_default_credentials.json"}}
+[debug] [2025-08-06T20:26:06.992Z] Checked if tokens are valid: true, expires at: 1754514002432
+[debug] [2025-08-06T20:26:06.992Z] Checked if tokens are valid: true, expires at: 1754514002432
+[debug] [2025-08-06T20:26:06.992Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/yudevx-53074/adminSdkConfig [none]
+[debug] [2025-08-06T20:26:07.462Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/yudevx-53074/adminSdkConfig 200
+[debug] [2025-08-06T20:26:07.462Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/yudevx-53074/adminSdkConfig {"projectId":"yudevx-53074","storageBucket":"yudevx-53074.firebasestorage.app"}
+[warn] !  firestore: Cloud Firestore Emulator does not support multiple databases yet. {"metadata":{"emulator":{"name":"firestore"},"message":"Cloud Firestore Emulator does not support multiple databases yet."}}
+[warn] !  firestore: Did not find a Cloud Firestore rules file specified in a firebase.json config file. {"metadata":{"emulator":{"name":"firestore"},"message":"Did not find a Cloud Firestore rules file specified in a firebase.json config file."}}
+[warn] !  firestore: The emulator will default to allowing all reads and writes. Learn more about this option: https://firebase.google.com/docs/emulator-suite/install_and_configure#security_rules_configuration. {"metadata":{"emulator":{"name":"firestore"},"message":"The emulator will default to allowing all reads and writes. Learn more about this option: https://firebase.google.com/docs/emulator-suite/install_and_configure#security_rules_configuration."}}
+[debug] [2025-08-06T20:26:07.511Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2025-08-06T20:26:07.511Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
+[debug] [2025-08-06T20:26:07.511Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","C:\\Users\\urajy\\.cache\\firebase\\emulators\\cloud-firestore-emulator-v1.19.8.jar","--host","127.0.0.1","--port",9000,"--websocket_port",9152,"--project_id","yudevx-53074","--single_project_mode",true,"--functions_emulator","127.0.0.1:3001"],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false,"shell":false,"port":9000} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"C:\\\\Users\\\\urajy\\\\.cache\\\\firebase\\\\emulators\\\\cloud-firestore-emulator-v1.19.8.jar\",\"--host\",\"127.0.0.1\",\"--port\",9000,\"--websocket_port\",9152,\"--project_id\",\"yudevx-53074\",\"--single_project_mode\",true,\"--functions_emulator\",\"127.0.0.1:3001\"],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false,\"shell\":false,\"port\":9000}"}}
+[info] i  firestore: Firestore Emulator logging to firestore-debug.log {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator logging to \u001b[1mfirestore-debug.log\u001b[22m"}}
+[info] +  firestore: Firestore Emulator UI websocket is running on 9152. {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator UI websocket is running on 9152."}}
+[debug] [2025-08-06T20:26:10.000Z] [Extensions] Connecting Extensions emulator, this is a noop.
+[info] i  functions: Watching "C:\Users\urajy\OneDrive\Desktop\PersonalProjects\FreelanceWebsite\freelance-react-website\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\Users\\urajy\\OneDrive\\Desktop\\PersonalProjects\\FreelanceWebsite\\freelance-react-website\\functions\" for Cloud Functions..."}}
+[debug] [2025-08-06T20:26:10.010Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] !  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2025-08-06T20:26:11.231Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "firebase-admin": "^10.3.0",
+    "firebase-functions": "^3.21.0",
+    "nodemailer": "^7.0.5"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-08-06T20:26:11.231Z] Building nodejs source
+[debug] [2025-08-06T20:26:11.231Z] Failed to find version of module node: reached end of search path C:\Users\urajy\OneDrive\Desktop\PersonalProjects\FreelanceWebsite\freelance-react-website\functions\node_modules
+[info] +  functions: Using node@22 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[info] i  functions: You are using a version of firebase-functions SDK (3.21.0) that does not have support for the newest Firebase Extensions features. Please update firebase-functions SDK to >=5.1.0 to use them correctly 
+[debug] [2025-08-06T20:26:11.236Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-08-06T20:26:11.244Z] Found firebase-functions binary at 'C:\Users\urajy\OneDrive\Desktop\PersonalProjects\FreelanceWebsite\freelance-react-website\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8615
+
+[info] [dotenv@17.2.1] injecting env (2) from .env -- tip: 📡 version env with Radar: https://dotenvx.com/radar
+
+[debug] [2025-08-06T20:26:11.792Z] Got response from /__/functions.yaml {"endpoints":{"sendEmailOnFormSubmit":{"platform":"gcfv1","eventTrigger":{"eventType":"providers/cloud.firestore/eventTypes/document.create","eventFilters":{"resource":"projects/yudevx-53074/databases/(default)/documents/contacts/{contactId}"},"retry":false},"labels":{},"entryPoint":"sendEmailOnFormSubmit"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: sendEmailOnFormSubmit. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: sendEmailOnFormSubmit."}}
+[debug] [2025-08-06T20:26:15.850Z] addFirestoreTrigger "{\"eventTrigger\":{\"eventType\":\"providers/cloud.firestore/eventTypes/document.create\",\"resource\":\"projects/yudevx-53074/databases/(default)/documents/contacts/{contactId}\",\"service\":\"firestore.googleapis.com\"}}"
+[debug] [2025-08-06T20:26:15.850Z] >>> [apiv2][query] PUT http://127.0.0.1:9000/emulator/v1/projects/yudevx-53074/triggers/us-central1-sendEmailOnFormSubmit-0 [none]
+[debug] [2025-08-06T20:26:15.850Z] >>> [apiv2][body] PUT http://127.0.0.1:9000/emulator/v1/projects/yudevx-53074/triggers/us-central1-sendEmailOnFormSubmit-0 "{\"eventTrigger\":{\"eventType\":\"providers/cloud.firestore/eventTypes/document.create\",\"resource\":\"projects/yudevx-53074/databases/(default)/documents/contacts/{contactId}\",\"service\":\"firestore.googleapis.com\"}}"
+[debug] [2025-08-06T20:26:16.697Z] <<< [apiv2][status] PUT http://127.0.0.1:9000/emulator/v1/projects/yudevx-53074/triggers/us-central1-sendEmailOnFormSubmit-0 200
+[debug] [2025-08-06T20:26:16.697Z] <<< [apiv2][body] PUT http://127.0.0.1:9000/emulator/v1/projects/yudevx-53074/triggers/us-central1-sendEmailOnFormSubmit-0 {}
+[info] +  functions[us-central1-sendEmailOnFormSubmit]: firestore function initialized. {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mfirestore\u001b[22m function initialized."}}
+[debug] [2025-08-06T20:26:16.704Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: connect ECONNREFUSED ::1:40001. If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:3000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌────────────┬────────────────┬──────────────────────────────────┐
+│ Emulator   │ Host:Port      │ View in Emulator UI              │
+├────────────┼────────────────┼──────────────────────────────────┤
+│ Functions  │ 127.0.0.1:3001 │ http://127.0.0.1:3000/functions  │
+├────────────┼────────────────┼──────────────────────────────────┤
+│ Firestore  │ 127.0.0.1:9000 │ http://127.0.0.1:3000/firestore  │
+├────────────┼────────────────┼──────────────────────────────────┤
+│ Extensions │ 127.0.0.1:3001 │ http://127.0.0.1:3000/extensions │
+└────────────┴────────────────┴──────────────────────────────────┘
+  Emulator Hub host: 127.0.0.1 port: 4400
+  Other reserved ports: 4500, 9152
+┌─────────────────────────┬───────────────┬─────────────────────┐
+│ Extension Instance Name │ Extension Ref │ View in Emulator UI │
+└─────────────────────────┴───────────────┴─────────────────────┘
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2025-08-06T20:29:33.338Z] File C:\Users\urajy\OneDrive\Desktop\PersonalProjects\FreelanceWebsite\freelance-react-website\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\urajy\\OneDrive\\Desktop\\PersonalProjects\\FreelanceWebsite\\freelance-react-website\\functions\\index.js changed, reloading triggers"}}
+[debug] [2025-08-06T20:29:34.346Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] !  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2025-08-06T20:29:35.629Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "firebase-admin": "^10.3.0",
+    "firebase-functions": "^3.21.0",
+    "nodemailer": "^7.0.5"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-08-06T20:29:35.629Z] Building nodejs source
+[debug] [2025-08-06T20:29:35.629Z] Failed to find version of module node: reached end of search path C:\Users\urajy\OneDrive\Desktop\PersonalProjects\FreelanceWebsite\freelance-react-website\functions\node_modules
+[info] +  functions: Using node@22 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[info] i  functions: You are using a version of firebase-functions SDK (3.21.0) that does not have support for the newest Firebase Extensions features. Please update firebase-functions SDK to >=5.1.0 to use them correctly 
+[debug] [2025-08-06T20:29:35.632Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-08-06T20:29:35.642Z] Found firebase-functions binary at 'C:\Users\urajy\OneDrive\Desktop\PersonalProjects\FreelanceWebsite\freelance-react-website\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8882
+
+[info] [dotenv@17.2.1] injecting env (2) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+
+[debug] [2025-08-06T20:29:36.120Z] Got response from /__/functions.yaml {"endpoints":{"sendEmailOnFormSubmit":{"platform":"gcfv1","eventTrigger":{"eventType":"providers/cloud.firestore/eventTypes/document.create","eventFilters":{"resource":"projects/yudevx-53074/databases/(default)/documents/contacts/{contactId}"},"retry":false},"labels":{},"entryPoint":"sendEmailOnFormSubmit"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: sendEmailOnFormSubmit. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: sendEmailOnFormSubmit."}}
+[debug] [2025-08-06T20:29:41.613Z] File C:\Users\urajy\OneDrive\Desktop\PersonalProjects\FreelanceWebsite\freelance-react-website\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\urajy\\OneDrive\\Desktop\\PersonalProjects\\FreelanceWebsite\\freelance-react-website\\functions\\index.js changed, reloading triggers"}}
+[debug] [2025-08-06T20:29:42.620Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] !  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2025-08-06T20:29:43.817Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "firebase-admin": "^10.3.0",
+    "firebase-functions": "^3.21.0",
+    "nodemailer": "^7.0.5"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-08-06T20:29:43.817Z] Building nodejs source
+[debug] [2025-08-06T20:29:43.818Z] Failed to find version of module node: reached end of search path C:\Users\urajy\OneDrive\Desktop\PersonalProjects\FreelanceWebsite\freelance-react-website\functions\node_modules
+[info] +  functions: Using node@22 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[info] i  functions: You are using a version of firebase-functions SDK (3.21.0) that does not have support for the newest Firebase Extensions features. Please update firebase-functions SDK to >=5.1.0 to use them correctly 
+[debug] [2025-08-06T20:29:43.820Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-08-06T20:29:43.829Z] Found firebase-functions binary at 'C:\Users\urajy\OneDrive\Desktop\PersonalProjects\FreelanceWebsite\freelance-react-website\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8410
+
+[info] [dotenv@17.2.1] injecting env (2) from .env -- tip: 📡 observe env with Radar: https://dotenvx.com/radar
+
+[debug] [2025-08-06T20:29:44.270Z] Got response from /__/functions.yaml {"endpoints":{"sendEmailOnFormSubmit":{"platform":"gcfv1","eventTrigger":{"eventType":"providers/cloud.firestore/eventTypes/document.create","eventFilters":{"resource":"projects/yudevx-53074/databases/(default)/documents/contacts/{contactId}"},"retry":false},"labels":{},"entryPoint":"sendEmailOnFormSubmit"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: sendEmailOnFormSubmit. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: sendEmailOnFormSubmit."}}
+[debug] [2025-08-06T20:44:06.271Z] Functions emulator received unknown request at path /
+[debug] [2025-08-06T20:44:06.318Z] Functions emulator received unknown request at path /favicon.ico
+[debug] [2025-08-06T20:45:01.459Z] Received signal SIGHUP 1
+[info]  
+[info] i  emulators: Received SIGHUP for the first time. Starting a clean shutdown. 
+[info] i  emulators: Please wait for a clean shutdown or send the SIGHUP signal again to stop right now. 
+[info] i  emulators: Shutting down emulators. {"metadata":{"emulator":{"name":"hub"},"message":"Shutting down emulators."}}
+[info] i  ui: Stopping Emulator UI {"metadata":{"emulator":{"name":"ui"},"message":"Stopping Emulator UI"}}
+[info] i  extensions: Stopping Extensions Emulator {"metadata":{"emulator":{"name":"extensions"},"message":"Stopping Extensions Emulator"}}
+[debug] [2025-08-06T20:45:01.487Z] [Extensions] Stopping Extensions emulator, this is a noop.
+[info] i  functions: Stopping Functions Emulator {"metadata":{"emulator":{"name":"functions"},"message":"Stopping Functions Emulator"}}
+[info] i  firestore: Stopping Firestore Emulator {"metadata":{"emulator":{"name":"firestore"},"message":"Stopping Firestore Emulator"}}
+[warn] !  Firestore Emulator has exited upon receiving signal: SIGINT 
+[info] i  eventarc: Stopping Eventarc Emulator {"metadata":{"emulator":{"name":"eventarc"},"message":"Stopping Eventarc Emulator"}}
+[info] i  tasks: Stopping Cloud Tasks Emulator {"metadata":{"emulator":{"name":"tasks"},"message":"Stopping Cloud Tasks Emulator"}}
+[info] i  hub: Stopping emulator hub {"metadata":{"emulator":{"name":"hub"},"message":"Stopping emulator hub"}}
+[info] i  logging: Stopping Logging Emulator {"metadata":{"emulator":{"name":"logging"},"message":"Stopping Logging Emulator"}}
+[debug] [2025-08-06T20:45:01.535Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: connect ECONNREFUSED ::1:40001. If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
