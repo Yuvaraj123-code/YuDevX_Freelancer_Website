@@ -547,3 +547,10 @@ form.space-y-4 > * + * {
     margin-left: 70px;
   }
 }
+
+@media (max-width: 360px) {
+.text-sm{
+  padding-Right: 45px;
+}
+
+}

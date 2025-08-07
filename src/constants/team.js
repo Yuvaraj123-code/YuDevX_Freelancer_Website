@@ -3,6 +3,7 @@ import Person02 from "../assets/Person0004.png"
 import Person03 from "../assets/Person0003.png"
 import Person04 from "../assets/Person0008.png";
 import Person05 from "../assets/Person007.png";
+import Person6 from "../assets/Aswanth.png";
 
 
 
@@ -54,8 +55,19 @@ export const team = [
       instagram: "https://instagram.com"
     }
   },
-  {
+   {
     id: 5,
+    name: "Ashwanth Pavithran",
+    position: "Full Stack Developer & Tester",
+    image: Person6,
+    bio: "Web developer proficient in end-to-end application development using modern full-stack technologies.",
+    social: {
+      linkedin: "https://linkedin.com",
+      instagram: "https://instagram.com"
+    }
+  },
+  {
+    id: 6,
     name: "Kosigan Koushik",
     position: "Full Stack Developer",
     image: Person05,
