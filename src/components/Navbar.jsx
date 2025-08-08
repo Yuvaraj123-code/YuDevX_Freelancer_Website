@@ -3,11 +3,18 @@ import { Link, useLocation } from 'react-router-dom';
 import { navLinks } from '../constants/navLinks';
 import logo from "../assets/logo4.png";
 import '../styles/Navbar.css';
+import SignInModal from './SignInModal';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const [showSignIn, setShowSignIn] = useState(false); // <- modal state
+
+   useEffect(() => {
+    setMobileMenuOpen(false);
+    setShowSignIn(false);
+  }, [location.pathname]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,20 +34,30 @@ const Navbar = () => {
     }
   }, [location]);
 
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setMobileMenuOpen(false);
+  }, [location.pathname]);
+
   const handleNavClick = () => {
     setMobileMenuOpen(false);
   };
 
   const handleHomeClick = (e) => {
     if (window.location.pathname === '/') {
-      // If already on home page, force reload
       e.preventDefault();
       window.location.href = '/';
     }
     handleNavClick();
   };
 
+  const toggleMobileMenu = () => {
+    console.log('Mobile menu toggled:', !mobileMenuOpen); // Debug log
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
+
   return (
+    <>
     <header className={`navbar ${scrolled ? 'scrolled' : ''}`} >
       <div className="container">
         {/* Home Link - special handling */}
@@ -54,7 +71,7 @@ const Navbar = () => {
               src={logo} 
               alt="Logo" 
               className="logo-img"
-              style={{ width: '100px', height: '100px' }}
+              style={{ width: '70px', height: '70px' }}
             />
           </a>
         ) : (
@@ -64,66 +81,68 @@ const Navbar = () => {
             onClick={handleNavClick}
           >
             <img 
-              src="/assets/logo.svg" 
+              src={logo} 
               alt="Logo" 
               className="logo-img"
-              style={{ width: '40px', height: '40px' }}
+              style={{ width: '60px', height: '60px' }}
             />
           </Link>
         )}
         
+        {/* Navigation Links */}
         <nav className={`nav-links ${mobileMenuOpen ? 'open' : ''}`}>
-          <ul>
-            {navLinks.map((link) => (
-              <li key={link.id}>
-                {link.path === '/' ? (
-                  // Special handling for Home link
-                  location.pathname === '/' ? (
-                    <a 
-                      href="/"
-                      onClick={handleHomeClick}
-                      className="active"
+            <ul>
+              {navLinks.map((link) => (
+                <li key={link.id}>
+                  {/* If this link is the sign-in action, render a button to open modal */}
+                  {(link.id === 'signin' || link.path === '/signin') ? (
+                    <button
+                      className="nav-action-btn"
+                      onClick={() => {
+                        setShowSignIn(true);
+                        setMobileMenuOpen(false); // close mobile menu if open
+                      }}
+                      type="button"
                     >
                       {link.title}
-                    </a>
+                    </button>
                   ) : (
-                    <Link 
-                      to="/"
-                      onClick={handleNavClick}
-                      className={location.pathname === '/' ? 'active' : ''}
-                    >
-                      {link.title}
-                    </Link>
-                  )
-                ) : (
-                  // Normal handling for other links
-                  <Link 
-                    to={link.path}
-                    onClick={handleNavClick}
-                    className={
-                      location.pathname + location.hash === link.path ? 'active' : ''
-                    }
-                  >
-                    {link.title}
-                  </Link>
-                )}
-              </li>
-            ))}
-          </ul>
-        </nav>
+                    // existing routing logic for other links
+                    link.path === '/' ? (
+                      location.pathname === '/' ? (
+                        <a href="/" onClick={handleHomeClick} className={location.pathname === '/' ? 'active' : ''}>
+                          {link.title}
+                        </a>
+                      ) : (
+                        <Link to="/" onClick={handleNavClick} className={location.pathname === '/' ? 'active' : ''}>
+                          {link.title}
+                        </Link>
+                      )
+                    ) : (
+                      <Link to={link.path} onClick={handleNavClick} className={location.pathname + location.hash === link.path ? 'active' : ''}>
+                        {link.title}
+                      </Link>
+                    )
+                  )}
+                </li>
+              ))}
+            </ul>
+          </nav>
 
+
+        {/* Mobile Menu Button - Using HTML entities instead of Font Awesome */}
         <button 
           className="mobile-menu-btn"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          onClick={toggleMobileMenu}
+          aria-label="Toggle mobile menu"
         >
-          {mobileMenuOpen ? (
-            <i className="fas fa-times"></i>
-          ) : (
-            <i className="fas fa-bars"></i>
-          )}
+          {mobileMenuOpen ? '✕' : '☰'}
         </button>
       </div>
     </header>
+      <SignInModal open={showSignIn} onClose={() => setShowSignIn(false)} />
+
+    </>
   );
 };
 

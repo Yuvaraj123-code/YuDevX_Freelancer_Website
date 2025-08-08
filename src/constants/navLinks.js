@@ -34,5 +34,11 @@ export const navLinks = [
     title: 'Contact',
     path: '/#contact',   // Now uses route with hash
     type: 'route'
+  },
+   {
+    id: 'signin',
+    title: 'Sign In',
+    path: '/#signin',   // Now uses route with hash
+    type: 'route'
   }
 ];

@@ -9,6 +9,8 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import AllProjects from './components/Allproject';
+import Testimonials from './components/Testimonials'
+import Signin from './components/Signin'
 import './App.css';
 
 
@@ -26,8 +28,10 @@ function App() {
                 <Projects />
                 <Services />
                 <Team />
+                <Testimonials />
                 <About />
                 <Contact />
+                {/* <Signin/> */}
               </>
             } />
             
